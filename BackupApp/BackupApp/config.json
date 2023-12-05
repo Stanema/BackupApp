@@ -1,0 +1,29 @@
+{
+  "sources": [
+    "C:\\Users\\marti\\source\\repos\\BackupApp\\BackupApp\\BackupApp\\folder",
+    "C:\\Users\\marti\\source\\repos\\BackupApp\\BackupApp\\BackupApp\\folder2"
+  ],
+
+  "targets": [
+    "C:\\Users\\marti\\source\\repos\\BackupApp\\BackupApp\\BackupApp\\backup",
+    "C:\\Users\\marti\\source\\repos\\BackupApp\\BackupApp\\BackupApp\\backup2"
+  ],
+
+  "method": "incremental", //"full", "Differential"
+  
+  "timing": "5 4 * * *", //CRON m h d m dayofweek
+  
+  "retention": {
+    "count": 10,
+    "size":  5
+  },
+
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+}
